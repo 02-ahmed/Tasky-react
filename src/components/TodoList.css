@@ -10,3 +10,7 @@ tr {
   width:250px;
   height: 40px;
 }
+
+label {
+  color: white;
+}

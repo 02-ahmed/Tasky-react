@@ -27,12 +27,14 @@ const AddTodo = ({onSubmit}:Props) => {
           onSubmit(data);
           reset();
           })}>
-              <div className='col-4'>
+              <div className='col-12 col-md-4 mb-3'>
+                <label htmlFor="todo">Task</label>
                 <input {...register("todo")} type="text" id='todo' className='form-control' placeholder='Enter task' />
                 {errors.todo && <p className='text-danger'>{errors.todo.message}</p>}
               </div>
-              <div className='col-4'>
-                <input {...register("dueDate", {valueAsDate:true})} type="date" id="dueDate" className='form-control'/>
+              <div className='col-12 col-md-4'>
+                <label htmlFor="dueDate">Due Date</label>
+                <input {...register("dueDate", {valueAsDate:true})} type="date" id="dueDate" className='form-control' placeholder='Choose date'/>
                 {errors.dueDate && <p className='text-danger'>{errors.dueDate.message}</p>}
               </div>
               <div className='row justify-content-center mt-3'>
