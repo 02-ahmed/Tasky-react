@@ -7,8 +7,8 @@ import {useForm} from 'react-hook-form'
 import "./TodoList.css"
 
 const schema = z.object({
-  todo: z.string().min(3),
-  dueDate: z.date(),
+  todo: z.string().min(3, {message:"Your task should be at least 3 letters"}),
+  dueDate: z.date({invalid_type_error:'Please choose a due date'}),
 });
 
 type TodoFormData = z.infer<typeof schema>;
