@@ -2,7 +2,7 @@
 import "./TodoList.css";
 import { IoIosRadioButtonOn } from "react-icons/io";
 import { IoIosRadioButtonOff } from "react-icons/io";
-import { CiEdit } from "react-icons/ci";
+/* import { CiEdit } from "react-icons/ci"; */
 import { MdDelete } from "react-icons/md";
 
 interface Todo {
