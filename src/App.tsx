@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import TodoList from "./components/TodoList"
 import AddTodo from "./components/AddTodo"
 import "./App.css"
@@ -9,8 +9,28 @@ interface Todo {
   dueDate: Date
 }
 
+function loadTodosFromLocalStorage(): Todo[] {
+  const savedTodos = localStorage.getItem("todos");
+  if (savedTodos) {
+    try {
+      return JSON.parse(savedTodos).map((todo: Todo) => ({
+        ...todo,
+        dueDate: new Date(todo.dueDate) // Convert dueDate string back to a Date object
+      }));
+    } catch (error) {
+      console.error("Failed to parse todos from local storage:", error);
+      return [];
+    }
+  }
+  return [];
+}
+
 function App() {
-  const [todos, setTodos] = useState<Todo[]>([])
+  const [todos, setTodos] = useState<Todo[]>(() => loadTodosFromLocalStorage());
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos))
+  }, [todos])
   return (
     <>
     <div className="text-center heading">
@@ -30,3 +50,4 @@ function App() {
 }
 
 export default App
+
