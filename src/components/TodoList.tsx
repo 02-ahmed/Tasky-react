@@ -30,7 +30,7 @@ const TodoList = ({todos, onDelete, onDone}:Props) => {
               <th></th>
               <th>Tasks</th>
               <th>Due</th>
-              <th></th>
+              {/* <th></th> */}  {/* to be done later */}
               <th></th>
             </tr>
           </thead>
@@ -42,9 +42,9 @@ const TodoList = ({todos, onDelete, onDone}:Props) => {
                 </td>
                 <td className="col-4 col-sm-8">{todo.todo}</td>
                 <td className="col-1 col-sm-1">{todo.dueDate.toLocaleDateString()}</td>
-                <td className="col-1 col-sm-1">
+                {/* <td className="col-1 col-sm-1">
                   <button className="btn btn-primary"><CiEdit /></button>
-                </td>
+                </td> */} {/* to be done later */}
                 <td className="col-1 col-sm-1">
                   <button className='btn btn-danger' onClick={() => onDelete(todo.id)}><MdDelete /></button>
                 </td>
