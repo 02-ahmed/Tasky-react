@@ -18,7 +18,7 @@ interface Props {
 }
 
 const AddTodo = ({onSubmit}:Props) => {
-  const {register, reset, handleSubmit, formState:{errors}} = useForm<TodoFormData>({resolver:zodResolver(schema)})
+  const {register, reset, handleSubmit, formState:{errors, isValid}} = useForm<TodoFormData>({resolver:zodResolver(schema)})
   return (
     <>
     <div className="container">
@@ -39,7 +39,7 @@ const AddTodo = ({onSubmit}:Props) => {
               </div>
               <div className='row justify-content-center mt-3'>
                 <div className="col-auto">
-                  <button className='btn btn-success add-btn'>Add</button>
+                  <button className='btn btn-success add-btn' disabled={!isValid}>Add</button>
                 </div>
               </div>
         </form>
