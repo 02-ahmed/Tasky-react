@@ -13,3 +13,7 @@ body {
   color: aliceblue;
 }
 
+.completed {
+  text-decoration: line-through;
+  color: black
+}
