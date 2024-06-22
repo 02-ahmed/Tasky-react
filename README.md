@@ -1,30 +1,24 @@
-# React + TypeScript + Vite
+# TASKY
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a ToDo List App that allows a user to add tasks which are displayed
 
-Currently, two official plugins are available:
+The tasks or todos can be selected to show a completed status and can also be deleted when no longer needed
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Tasky](https://o2tasky.netlify.app/) This is a live link to Tasky
 
-## Expanding the ESLint configuration
+# Overview
+- Tasky is a simple and intuitive todo list application designed to help you keep track of your tasks and stay organized.
+- Tasky provides an easy-to-use interface to manage all your tasks efficiently.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# Features
+- Create and delete tasks
+- Assign due dates to your tasks to keep track of deadlines 
+- User-friendly interface with a clean design for easy navigation and task management
 
-- Configure the top-level `parserOptions` property like this:
+# Screenshots
+![mobile](./screenshots/photo_2024-06-22_19-57-39.jpg)
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+![web](./screenshots/Screenshot%202024-06-22%20195706.png)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# Contact
+For any questions or suggestions, please contact me on [Twitter](https://twitter.com/_02ahmed)
